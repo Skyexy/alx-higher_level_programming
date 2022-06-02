@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if n == 1:
         print("1 argument:")
     elif n == 0:
-        print("1 arguments.")
+        print("0 arguments.")
     else:
         print("{} arguments".format(n))
     for i in range(1, n + 1):
