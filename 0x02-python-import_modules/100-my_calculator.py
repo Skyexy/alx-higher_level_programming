@@ -5,7 +5,7 @@ def main():
     n = len(sys.argv)-1
     if n != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit (1)
+        sys.exit(1)
     y = sys.argv[2]
     a = int(sys.argv[1])
     b = int(sys.argv[3])
@@ -17,9 +17,10 @@ def main():
         print("{} + {} = {}".format(a, b, add(a, b)))
     elif y == '-':
         print("{} - {} = {}".format(a, b, sub(a, b)))
-    else :
+    else:
         print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit (1)
+        sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
