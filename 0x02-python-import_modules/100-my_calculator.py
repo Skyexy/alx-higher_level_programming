@@ -9,7 +9,7 @@ def main():
     y = sys.argv[2]
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    if (y = '*'):
+    if y == '*':
         print("{} * {} = {}".format(a, b, mul(a, b)))
     elif y == '/':
         print("{} / {} = {}".format(a, b, div(a, b)))
