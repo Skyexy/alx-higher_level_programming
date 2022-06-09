@@ -7,4 +7,4 @@ def search_replace(my_list, search, replace):
             continue
         else:
             z.append(i)
-        return z
+    return z
