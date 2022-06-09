@@ -8,7 +8,7 @@ def uniq_add(my_list=[]):
             if z == d:
                 m = 1
                 break
-            mem.append(z)
+        mem.append(z)
         if m == 0:
             i = i + z
     return i
