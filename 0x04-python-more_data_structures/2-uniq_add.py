@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def uniq_add(my_list=[]):
     i = 0
     mem = []
@@ -8,6 +9,6 @@ def uniq_add(my_list=[]):
                 m = 1
                 break
             mem.append(z)
-            if m == 0:
-                i = i + z
+        if m == 0:
+            i = i + z
     return i
