@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
         while i < len(roman_string):
             if i+1 < len(roman_string) and roman_string[i:i+2] in val:
                 int += val[roman_string[i:i+2]]
-                i += 2 
+                i += 2
             else:
                 int += val[roman_string[i]]
                 i += 1
