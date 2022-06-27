@@ -1,4 +1,7 @@
-from doctest_in_help import add_integer
+Trying:
+	from doctest_in_help import add_integer
+Expecting nothing
+ok
 Trying:
     add_integer(1, 2):
 Expecting:
