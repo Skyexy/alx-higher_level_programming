@@ -1,3 +1,4 @@
+from doctest_in_help import add_integer
 Trying:
     add_integer(1, 2):
 Expecting:
