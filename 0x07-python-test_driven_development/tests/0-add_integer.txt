@@ -1,5 +1,5 @@
 Trying:
-	from doctest_in_help import add_integer
+	from 0-add_integer import add_integer
 Expecting nothing
 ok
 Trying:
