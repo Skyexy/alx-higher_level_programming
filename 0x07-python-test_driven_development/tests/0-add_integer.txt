@@ -1,14 +1,1 @@
-Trying:
-	from 0-add_integer import add_integer
-Expecting nothing
-ok
-Trying:
-    add_integer(1, 2):
-Expecting:
-    3
-ok
-Trying:
-    add_integern(100, -2)
-Expecting:
-    98
-ok
+
