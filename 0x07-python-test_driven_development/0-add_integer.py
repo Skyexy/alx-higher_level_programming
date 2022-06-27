@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 a function that adds 2 integers
 """
