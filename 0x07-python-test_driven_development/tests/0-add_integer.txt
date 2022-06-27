@@ -7,5 +7,3 @@
 5
 >>> add_integer(2, 3.0)
 5
->>> add_integer('3', 3)
-TypeError: a must be an integer
