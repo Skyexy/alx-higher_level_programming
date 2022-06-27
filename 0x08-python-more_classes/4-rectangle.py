@@ -41,7 +41,7 @@ class Rectangle:
 
     def __repr__(self):
         return 'Rectangle({0.width!r}, {0.height!r})'.format(self)
-    
+
     def __eval__(self):
         return Rectangle()
 
