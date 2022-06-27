@@ -11,3 +11,4 @@ Trying:
     add_integern(100, -2)
 Expecting:
     98
+ok
