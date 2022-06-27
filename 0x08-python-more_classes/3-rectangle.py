@@ -51,7 +51,6 @@ class Rectangle:
     def get_str(self):
         total = ""
         if self.__width is 0 or self.__height == 0:
-            total += "\n"
             return total
         for i in range(self.__height):
             total += ("#" * self.__width)
