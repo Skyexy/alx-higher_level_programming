@@ -20,10 +20,10 @@ def matrix_divided(matrix, div):
                 for i in row:
                     if type(i) != (int or float):
                         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-                        else:
-                            list2.append(round(i/div, 2))
-                            listl.append(list2.copy())
-                            list2.clear()
+                    else:
+                        list2.append(round(i/div, 2))
+                        listl.append(list2.copy())
+                        list2.clear()
             else:
                 raise TypeError("Each row of the matrix must have the same size")
     else:
