@@ -40,7 +40,7 @@ def matrix_mul(m_a, m_b):
                     elif type(m_a[i][k]) != (int or float):
                         raise TypeError("m_a should contain only integers or floats")
                     elif type(m_b[k][j]) != (int or float):
-                        aise TypeError("m_b should contain only integers or floats")
+                        raise TypeError("m_b should contain only integers or floats")
                     else:
                         try:
                             calculation += m_a[i][k] * m_b[k][j]
