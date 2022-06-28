@@ -3,7 +3,7 @@
 This is the LockedClass module
 """
 
-class LockedClass:
+class LockedClass(object):
     __slots__ = ['first_name']
 
 
