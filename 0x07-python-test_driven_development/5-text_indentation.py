@@ -1,14 +1,18 @@
+#!/usr/bin/python3
+"""
+Module 5-text_indentation
+Contain a method that print a text
+The text with 2 new lines after each of these characters: ., ? and :
+Takes one text argumnet
+"""
+
+
 def text_indentation(text):
-    i = 0
-    if type(text) != str:
+    """a text with 2 new lines after each of these characters: ., ? and :"""
+    if type(text) is not str:
         raise TypeError("text must be a string")
-    else:
-        o = len(text)
-        while i < o:
-            print(text[i], end="")
-            if text[i] == '.' or text[i] == '?' or text[i] == ':':
-                while text[i+1]== ' ':
-                    i = i + 1
-                print()
-                print()
-            i = i + 1
+    for char in ".?:":
+        text = text.replace(char, char + "\n\n")
+    new_line = [line.strip(' ') for line in text.split("\n")]
+    output = "\n".join(new_line)
+    print(output, end="")
