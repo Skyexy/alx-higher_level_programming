@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-nu = 0
+num = 0
 def magic_string():
-    global nu; nu += 1; print("BestSchool" * nu)
+    global num
+    num += 1
+    return("loop" * num)
