@@ -24,7 +24,4 @@ try:
 except FileNotFoundError:
     existing_content = []
 
-for arg in argv[1:]:
-    existing_content.append(arg)
-
-save_to_json_file(existing_content, filename)
+save_to_json_file(existing_content + argv[1:], filename)
