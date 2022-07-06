@@ -25,6 +25,6 @@ except FileNotFoundError:
     existing_content = []
 
 for arg in argv:
-    list.append(arg)
+    existing_content.append(arg)
 
 save_to_json_file(existing_content, filename)
