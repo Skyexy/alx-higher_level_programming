@@ -1,12 +1,29 @@
 #!/usr/bin/python3
+"""
+    contains a class Base.
+"""
 import json
 import csv
 
 
 class Base:
+    """
+        base class for the entire project.
+        Attributes:
+            __nb_ojects (int)
+            id (int)
+        Methods:
+            __init__()
+    """
+
     __nb_objects = 0
     
     def __init__(self, id=None):
+        """
+           Initializes the class attributes.
+           Args:
+               id (int)
+        """
         if id is not None:
             self.id = id
         else:
@@ -15,6 +32,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """
+            returns JSON string repr of list_dictionaries
+        """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
@@ -22,6 +42,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+            writes the JSON strin representation of list_objs to a file
+        """
         filename = "{}.json".format(cls.__name__)
         list1 = []
 
@@ -37,6 +60,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+            returns the list of the JSON string representation
+        """
         if json_string is None or len(json_string) == 0:
             return "[]"
         else:
@@ -44,6 +70,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """
+            returns an instance with all attributes already set.
+        """
         from models.rectangle import Rectangle
         from models.square import Square
         if cls.__name__ == 'Rectangle':
@@ -55,6 +84,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """
+            returns a list of instances
+        """
         filename = "{}.json".format(cls.__name__)
         list1 = []
         try:
@@ -68,6 +100,9 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """
+            serializes in CSV and saves in a file
+        """
         filename = "{}.csv".format(cls.__name__)
 
         if list_objs is None:
@@ -83,6 +118,9 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """
+            deserializes from CSV from a file.
+        """
         filename = "{}.csv".format(cls.__name__)
         with open(filename, "r") as f:
             if cls.__name__ == 'Rectangle':
