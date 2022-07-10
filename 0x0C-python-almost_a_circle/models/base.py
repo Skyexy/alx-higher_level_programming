@@ -5,9 +5,8 @@ import csv
 
 class Base:
     __nb_objects = 0
-
+    
     def __init__(self, id=None):
-
         if id is not None:
             self.id = id
         else:
@@ -45,8 +44,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        from rectangle import Rectangle
-        from square import Square
+        from models.rectangle import Rectangle
+        from models.square import Square
         if cls.__name__ == 'Rectangle':
             m = Rectangle(2, 3)
         if cls.__name__ == 'Square':
