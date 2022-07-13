@@ -119,14 +119,14 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
-         """
-            returns the area of the Rectangle instance.
+        """
+        returns the area of the Rectangle instance.
         """
         return self.__width * self.__height
 
     def display(self):
         """
-            prints to stdout the Rectangle instance with #
+        prints to stdout the Rectangle instance with #
         """
         for i in range(self.__y):
             print()
@@ -136,7 +136,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """
-            returns a string formart of the rectangle
+        returns a string formart of the rectangle
         """
         return ("[{}] ({}) {}/{} - {}/{}"
                 .format(type(self).__name__, self.id, self.__x, self.__y, self.__width, self.__height))
@@ -168,7 +168,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """
-            returns the dictionary repr of a rect
+        returns the dictionary repr of a rect
         """
         s = {'x': self.__x, 'y': self.__y, 'id': self.id, 'height': self.__height, 'width': self.__width}
         return s
