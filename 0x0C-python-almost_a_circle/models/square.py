@@ -14,36 +14,26 @@ class Square(Rectangle):
             initialises Square (overrides Rectangle init)
         """
         super().__init__(size, size, x, y, id)
-        self.__size = size
-        self.__x = x
-        self.__y = y
-
-    def __str__(self):
-        """
-            returns the size of the square
-        """
-        return ("[{}] ({}) {}/{} - {}"
-                .format(type(self).__name__, self.id, self.__x, self.__y, self.__size))
 
     @property
     def size(self):
         """
             returns the size of the square
         """
-        return self.__size
+        return self.width
 
     @size.setter
-    def size(self, size):
+    def size(self, value):
         """
             sets the value of size
         """
-        if type(size) != int:
+        if type(value) != int:
             raise TypeError("width must be an integer")
-        elif size <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = size
-        self.__height = size
-        self.__size = size
+
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """
@@ -53,23 +43,32 @@ class Square(Rectangle):
                 *args -  variable number of no-keyword args
                 **kwargs - variable number of keyworded args
         """
-        if args:
-            try:
-                self.id = args[0]
-                self.__size = args[1]
-                self.__x = args[2]
-                self.__y = args[3]
-            except:
-                pass
-        else:
-            self.id = kwargs.get('id', self.id)
-            self.__size = kwargs.get('size', self.__size)
-            self.__x = kwargs.get('x', self.__x)
-            self.__y = kwargs.get('y', self.__y)
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+            return
+
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
+
+    def __str__(self):
+        """
+            Overloading str function
+        """
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
+                                             self.id, self.x, self.y,
+                                             self.width)
 
     def to_dictionary(self):
         """
             Returns the dictionary representation of a Square
         """
-        s = {'id': self.id, 'x': self.__x, 'size': self.__size, 'y': self.__y}
-        return s
+        return {'id': getattr(self, "id"),
+                'size': getattr(self, "width"),
+                'x': getattr(self, "x"),
+                'y': getattr(self, "y")}
