@@ -2,7 +2,7 @@
 """
     contains class Rectangle which implements Base.
 """
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
