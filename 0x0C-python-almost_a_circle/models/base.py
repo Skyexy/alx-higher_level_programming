@@ -73,8 +73,8 @@ class Base:
         """
             returns an instance with all attributes already set.
         """
-        from models.rectangle import Rectangle
-        from models.square import Square
+        from rectangle import Rectangle
+        from square import Square
         if cls.__name__ == 'Rectangle':
             m = Rectangle(2, 3)
         if cls.__name__ == 'Square':
