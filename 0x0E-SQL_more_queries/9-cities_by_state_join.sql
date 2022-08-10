@@ -1,9 +1,7 @@
--- List all cities of CA that can be found in db 'hbtn_0d_usa'
--- 'states' table contains only one record where 'name = California'
--- but 'id' cant be different
--- Results must be sorted in ascending order by 'cities.id'
--- Not allowed to use JOIN keyword
+-- List all cities in db 'hbtn_0d_usa'
+-- Each record should display cities.id, cities.name, and states.name
+-- Can only use SELECT statement once
 SELECT cities.id, cities.name, states.name
 FROM states
-INNNER JOIN cities
+INNER JOIN cities
 ON states.id = cities.state_id;
