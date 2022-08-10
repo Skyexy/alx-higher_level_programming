@@ -1,9 +1,11 @@
--- List all genres in 'hbtn_0d_tvshows_rate' by their rating
--- Each record should display tv_genres.name and rating sum
--- You can use only one SELECT statement
-SELECT tv_genres.name, SUM(tv_show_ratings.rate) AS rating
+-- Use 'hbtn_0d_tvshows' to list all genres of show 'Dexter'
+-- 'tv_shows' table contains only one record where title = Dexter
+-- Each record should display tv_genres.name
+-- Results must be sorted in ascending order by genre name
+-- You can only use one SELECT statement
+SELECT tv_genres.name
 FROM tv_genres
-INNER JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
-INNER JOIN tv_show_ratings ON tv_show_genres.show_id = tv_show_ratings.show_id
-GROUP BY tv_show_genres.genre_id
-ORDER BY rating DESC;
+INNER JOIN tv_show_genres m ON tv_genres.id = m.genre_id
+INNER JOIN tv_shows s ON m.show_id = s.id
+WHERE s.title = 'Dexter'
+ORDER BY tv_genres.name ASC;
