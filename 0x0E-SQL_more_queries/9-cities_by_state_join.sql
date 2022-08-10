@@ -5,5 +5,5 @@
 -- Not allowed to use JOIN keyword
 SELECT city.id, city.name, state.name
 FROM states
-  INNNER JOIN cities
+INNNER JOIN cities
 ON states.id = cities.state_id;
