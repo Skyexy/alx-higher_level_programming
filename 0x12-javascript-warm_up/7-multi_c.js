@@ -1,10 +1,9 @@
 #!/usr/bin/node
 const args = parseInt(process.argv[2]);
-if (args){
+if (args) {
   for (let i = 0; i < args; i++) {
     console.log('C is fun');
   }
-}
-else{
+} else {
   console.log('Missing number of occurrences');
 }
