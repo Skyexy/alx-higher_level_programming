@@ -1,7 +1,7 @@
 #!/usr/bin/node
 let z = 1;
 const args = parseInt(process.argv[2]);
-if (args === 0 || args === 1 || Number.isNaN(args) == false) {
+if (args === 0 || args === 1 || Number.isNaN(args) === false) {
   console.log(z);
 } else {
   for (let i = args; i >= 1; i--) {
