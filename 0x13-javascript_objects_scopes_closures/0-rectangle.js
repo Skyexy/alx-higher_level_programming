@@ -4,4 +4,4 @@ class Rectangle {
     this.name = 'Rectangle';
   }
 }
-module.exports = { Rectangle }
+module.exports = { Rectangle };
