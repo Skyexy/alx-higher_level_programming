@@ -1,5 +1,4 @@
 #!/usr/bin/node
-class Rectangle {
+export class Rectangle {
   constructor() {}
 }
-export {Rectangle};
