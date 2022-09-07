@@ -3,7 +3,7 @@ let args = 0;
 
 if (process.argv[3]){
   let me = process.argv.slice(2);
-  me.sort(function(a, b){return a - b});
+  me.sort(function(a, b){return b-a});
   args = me[1];
 }
 console.log(args);
