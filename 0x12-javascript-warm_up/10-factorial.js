@@ -9,4 +9,3 @@ function factorial(n){
 }
 const z = factorial(args);
 console.log(z);
-}
