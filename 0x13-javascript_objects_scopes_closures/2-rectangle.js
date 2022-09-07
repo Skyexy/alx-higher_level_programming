@@ -2,7 +2,7 @@
 module.exports = class Rectangle {
   constructor(w, h) {
     if (w < 1 || h < 1 || !Number.isInteger(w) || !Number.isInteger(h)){
-      var objectA = {};
+      let objectA = {};
     }
     else {
       this.width = w;
