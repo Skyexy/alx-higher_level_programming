@@ -7,6 +7,7 @@ module.exports = class Rectangle {
     }
   }
   print() {
+    const si = 'X';
     for (let i = 0; i < this.height; i++) {
       console.log(si.repeat(this.width));
     }
