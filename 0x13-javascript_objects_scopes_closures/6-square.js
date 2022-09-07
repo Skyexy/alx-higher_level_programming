@@ -7,14 +7,14 @@ module.exports = class Square extends me {
   }
   charPrint(c) {
     if (c) {
-      for (let i = 0; i < this.h; i++) {
-        console.log(c.repeat(this.h));
+      for (let i = 0; i < this.width; i++) {
+        console.log(c.repeat(this.width));
       }
     }
     else {
       const si = 'X';
-      for (let i = 0; i < this.h; i++) {
-        console.log(si.repeat(this.h));
+      for (let i = 0; i < this.width; i++) {
+        console.log(si.repeat(this.width));
       }
     }
   }
