@@ -12,8 +12,8 @@ module.exports = class Square extends me {
     }
     else {
       const si = 'X';
-      for (let i = 0; i < args; i++) {
-        console.log(si.repeat(args));
+      for (let i = 0; i < size; i++) {
+        console.log(si.repeat(size));
       }
     }
   }
