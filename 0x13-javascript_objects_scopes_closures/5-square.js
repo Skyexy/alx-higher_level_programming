@@ -5,4 +5,4 @@ module.exports = class Square extends Rectangle {
     super(w, h);
     this.size = size;
   }
-}
+};
