@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let args = 1;
-if (process.argv[2]){
+if (process.argv[2]) {
   args = parseInt(process.argv[2]);
 }
 function factorial (n) {
