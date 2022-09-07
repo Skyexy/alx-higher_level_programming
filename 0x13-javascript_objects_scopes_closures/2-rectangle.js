@@ -8,7 +8,7 @@ module.exports = class Rectangle {
 =======
   constructor(w, h) {
     if (w < 1 || h < 1 || !Number.isInteger(w) || !Number.isInteger(h)){
-      this.objectA = {};
+      objectA = {};
     }
     else {
 >>>>>>> efeca1ddf88eb9b64da8542391a364eb8edb5729
