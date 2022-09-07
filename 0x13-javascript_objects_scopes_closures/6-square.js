@@ -5,13 +5,13 @@ module.exports = class Square extends me {
     super(size);
     this.size = size;
   }
-  charPrint(c) {
+
+  charPrint (c) {
     if (c) {
       for (let i = 0; i < this.width; i++) {
         console.log(c.repeat(this.width));
       }
-    }
-    else {
+    } else {
       const si = 'X';
       for (let i = 0; i < this.width; i++) {
         console.log(si.repeat(this.width));
