@@ -5,4 +5,4 @@ if (process.argv[3]){
   args.sort(function(a, b){return a - b});
   args = args[1];
 }
-console(args);
+console.log(args);
