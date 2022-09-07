@@ -7,5 +7,6 @@ function factorial(n){
     return n * factorial(n-1);
   }
 }
-console.log(factorial(args));
+const z = factorial(args);
+console.log(z);
 }
