@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 import sys
 from MySQLdb import _mysql
-db=_
 
-mydb = mysql.connect(
+mydb = _mysql.connect(
   host= "localhost",
   port = 3306,
   user= sys.argv[1],
