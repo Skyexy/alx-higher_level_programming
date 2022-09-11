@@ -13,8 +13,8 @@ if __name__ == "__main__":
                          port=3306)
     cur = db.cursor()
     cmd = """SELECT id, name FROM states
-    WHERE NAME LIKE BINARY '{}' ORDER BY id ASC"""
-    .format(sys.argv[4])
+             WHERE NAME LIKE BINARY '{}' ORDER BY id ASC"""
+             .format(sys.argv[4])
     cur.execute(cmd)
     allStates = cur.fetchall()
     for state in allStates:
