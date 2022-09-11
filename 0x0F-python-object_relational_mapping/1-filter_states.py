@@ -12,10 +12,11 @@ if __name__ == "__main__":
                          host='localhost',
                          port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT id, name
-                FROM states
-                WHERE NAMELIKE BINARY 'N%'
-                ORDER BY id ASC""")
+    cmd = """SELECT id, name
+             FROM states
+             WHERE NAMELIKE BINARY 'N%'
+             ORDER BY id ASC"""
+    cur.execute(cmd)
     allStates = cur.fetchall()
     for state in allStates:
         print(state)
