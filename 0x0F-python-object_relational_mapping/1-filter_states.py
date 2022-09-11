@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""List all states from a given db sorted in ascending order by id
+"""List all states with a name starting with uppercase N
 Username, password, and database names are given as user args
 """
 import sys
@@ -14,11 +14,12 @@ if __name__ == "__main__":
     cur = db.cursor()
     cmd = """SELECT id, name
              FROM states
-             WHERE NAMELIKE BINARY 'N%'
-             ORDER BY id ASC"""
+             WHERE name LIKE BINARY 'N%'
+             ORDER BY id ASC;"""
     cur.execute(cmd)
-    allStates = cur.fetchall()
-    for state in allStates:
+    nStates = cur.fetchall()
+
+    for state in nStates:
         print(state)
 
     cur.close()
