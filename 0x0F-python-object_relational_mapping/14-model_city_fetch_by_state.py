@@ -13,6 +13,6 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-
+    
     for instance in session.query(State, City).filter(State.id == City.state_id):
         print("{}: ({:d}) {}".format(instance.State.name, instance.City.id, instance.City.name))
