@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """fetches https://intranet.hbtn.io/status and givs error message"""
 import urllib.request
+import urllib.error
 import sys
 
 if __name__ == "__main__":
