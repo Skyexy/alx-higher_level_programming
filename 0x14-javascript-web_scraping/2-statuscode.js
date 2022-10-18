@@ -3,6 +3,6 @@
 const myArgs = process.argv.slice(2);
 const request = require('request');
 
-request.get(myArgs[0], function (err, res, data) {
+request.get(myArgs[0], { json: true }, function (err, res, data) {
   console.log('code:', res.statusCode);
 });
