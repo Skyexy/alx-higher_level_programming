@@ -4,5 +4,5 @@ const myArgs = process.argv.slice(2);
 const request = require('request');
 
 request.get(myArgs[0], function (err, res) {
-  console.log('code: ', res.statusCode);
+  console.log('code:', res.statusCode);
 });
