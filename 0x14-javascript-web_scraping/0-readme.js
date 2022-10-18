@@ -1,6 +1,12 @@
 #!/usr/bin/node
 
-const {readFileSync, promises: fsPromises} = require('fs');
-const myArgs = process.argv.slice(2);
-const contents = readFileSync(myArgs[0], 'utf-8');
-console.log(contents);
+try {
+
+	const myArgs = process.argv.slice(2);
+	
+	const contents = await fsPromises.readFile(myArgs[0], 'utf-8');
+	
+	console.log(contents);
+} catch (err) {
+	console.log(err);
+}
