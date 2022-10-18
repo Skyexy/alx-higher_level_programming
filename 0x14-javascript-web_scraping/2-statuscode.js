@@ -3,6 +3,6 @@
 const myArgs = process.argv.slice(2);
 const https = require('https');
 
-request.on(myArgs[0], function (res) {
-  console.log("code: ", res.statusCode);
+https.request(myArgs[0], function (response) {
+  console.log("code: ", response.statusCode);
 });
