@@ -3,6 +3,6 @@
 const myArgs = process.argv.slice(2);
 const request = require('request');
 
-request.get("https://swapi-api.hbtn.io/api/films/1/", function (err, res, data) {
-  console.log(data.title);
+request.get("https://swapi-api.hbtn.io/api/films/1/", function (err, res, body) {
+  console.log(body);
 });
