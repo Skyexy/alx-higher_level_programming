@@ -6,5 +6,12 @@ const link = myArgs[0]
 const count = 0;
 
 request.get(link, { json: true }, (err, res, body) => {
-  console.log(body.characters);
+  for (const resu of body.results) {
+    for (const char of resu.characters) {
+      if (character.includes('18')) {
+        count++;
+      }
+    }
+  }
+  console.log(count);
 });
