@@ -5,5 +5,6 @@ const request = require('request');
 var link = "https://swapi-api.hbtn.io/api/films/" + myArgs[0]
 
 request.get(link, { json: true }, (err, res, body) => {
+  if (err) throw err;
   console.log(body.title);
 });
