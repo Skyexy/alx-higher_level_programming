@@ -4,19 +4,18 @@ const myArgs = process.argv.slice(2);
 const fs = {};
 const request = require('request');
 const link = myArgs[0];
-var userid = 1;
-var num = 0;
+
 request.get(link, (err, res, body) => {
   if (err) throw err;
   for (const resu of body) {
     if (resu.completed) {
-      if (userid[resu.userId]) {
-          userid[resu.userId]++
+      if (fs[resu.userId]) {
+          fs[resu.userId]++
       }
       else {
-        userid[resu.userId] = 1
+        fs[resu.userId] = 1
       }
     }
   }
-  console.log(userid);
+  console.log(fs);
 });
