@@ -5,7 +5,8 @@ const fs = require('fs');
 const request = require('request');
 const link = myArgs[0];
 
-request.get(link, { json: true }, (err, res, body) => {
+request.get(link, (err, res, body) => {
+  if (error) throw error;
   fs.writeFile(myArgs[1], body, 'utf8', function (err, data) {
     if (err) throw err;
   });
