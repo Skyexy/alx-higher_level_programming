@@ -5,10 +5,5 @@ const link = process.argv[2];;
 const count = 0;
 
 request.get(link, { json: true }, (err, res, body) => {
-  for (const character of body.characters) {
-    if (character.includes('18')) {
-      count++;
-    }
-  }
-  console.log(count);
+  console.log(body.characters);
 });
