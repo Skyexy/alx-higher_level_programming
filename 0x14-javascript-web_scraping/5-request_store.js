@@ -3,7 +3,7 @@
 const myArgs = process.argv.slice(2);
 const fs = require('fs');
 const request = require('request');
-var link = myArgs[0]
+const link = myArgs[0];
 
 request.get(link, { json: true }, (err, res, body) => {
   fs.writeFile(myArgs[1], body, 'utf8', function (err, data) {
