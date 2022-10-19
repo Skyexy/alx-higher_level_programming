@@ -1,6 +1,7 @@
 #!/usr/bin/node
 // a script that display the status code of a GET request;
 const myArgs = process.argv.slice(2);
+const fs = require('fs');
 const request = require('request');
 var link = myArgs[0]
 
