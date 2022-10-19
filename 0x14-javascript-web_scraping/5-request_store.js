@@ -6,7 +6,7 @@ const request = require('request');
 const link = myArgs[0];
 
 request.get(link, (err, res, body) => {
-  if (error) throw error;
+  if (err) throw err;
   fs.writeFile(myArgs[1], body, 'utf8', function (err, data) {
     if (err) throw err;
   });
