@@ -8,7 +8,7 @@ const count = 0;
 request.get(link, { json: true }, (err, res, body) => {
   for (const resu of body.results) {
     for (const char of resu.characters) {
-      if (character.includes('18')) {
+      if (char.includes('18')) {
         count++;
       }
     }
